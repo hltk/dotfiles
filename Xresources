@@ -23,6 +23,7 @@ XTerm*font4: -*-terminus-medium-*-*-*-22-*-*-*-*-*-iso10646-1
 XTerm*font5: -*-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-1
 XTerm*font6: -*-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-1
 
+! for cmd.exe style
 !XTerm*faceName: Consolas
 !XTerm*faceSize: 12
 !XTerm*renderFont: true
@@ -33,11 +34,3 @@ XTerm*font6: -*-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-1
 !XTerm*faceSize5: 22
 
 *ttyModes: erase ^?
-
-XClock*.update:   1
-XClock*.analog:   False
-XClock*.render:   True
-XClock*.padding:  40
-XClock*.face:   Microsoft Sans Serif:size=20
-XClock*.strftime:  %H:%M:%S %D
-XClock*.background:  #c0c7c8
