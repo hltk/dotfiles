@@ -20,4 +20,8 @@ dwmstatus &
 
 compton -b
 
+# enable tap to click and natural scrolling
+xinput set-prop "MSFT0001:00 06CB:CD3E Touchpad" 301 1
+xinput set-prop "MSFT0001:00 06CB:CD3E Touchpad" 309 1
+
 exec dwm
