@@ -18,4 +18,6 @@ xbanish &
 
 dwmstatus &
 
+compton -b
+
 exec dwm
