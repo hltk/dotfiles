@@ -1,3 +1,6 @@
+XTerm*foreground: black
+XTerm*background: ivory
+
 XTerm*vt100.locale: true
 XTerm*vt100.metaSendsEscape: true
 XTerm*allowBoldFonts: false
