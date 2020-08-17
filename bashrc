@@ -31,3 +31,5 @@ HISTIGNORE="ls:ll:cd:pwd:bg:fg:history"
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=10000000
+
+alias wn="worknotes.sh"
