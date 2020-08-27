@@ -31,6 +31,4 @@ else
 	fi
 fi
 
-xcompmgr -cf -I1 -O1 -D1 &
-
 exec dwm
