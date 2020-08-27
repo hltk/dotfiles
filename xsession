@@ -1,5 +1,4 @@
 . "$HOME/.profile"  # environment setup
-export LANG=en_US.UTF-8
 
 xrdb -merge $HOME/.Xresources
 
