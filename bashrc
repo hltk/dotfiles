@@ -33,3 +33,7 @@ HISTSIZE=100000
 HISTFILESIZE=10000000
 
 alias wn="worknotes.sh"
+
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+	. /usr/share/bash-completion/bash_completion
+
