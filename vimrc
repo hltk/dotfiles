@@ -31,4 +31,5 @@ endif
 " disable viminfo for commit msgs
 autocmd FileType gitcommit setlocal nobuflisted
 
+" dark background
 set background=dark
