@@ -11,24 +11,22 @@ setxkbmap fi
 
 xbanish &
 
-if [ "$(hostname -s)" = "pc" ]; then
-	while true; do
-		xsetroot -name "$(date)"
-		sleep 2
-	done &
-else
-	slstatus &
-fi
+slstatus &
 
-if hostname -s | grep -q "ob"; then
-	feh --bg-center /home/d/pics/puffy67.gif
-else
-	if hostname -s | grep -q "yoga"; then
-		# enable tap to click and natural scrolling
-		xinput set-prop "MSFT0001:00 06CB:CD3E Touchpad" 300 1
-		xinput set-prop "MSFT0001:00 06CB:CD3E Touchpad" 309 .55
-		xinput set-prop "MSFT0001:00 06CB:CD3E Touchpad" 318 1
+if [ "$(uname -s)" = "Linux" ]; then
+	# enable tap to click and natural scrolling
+	tp="$(xinput list --name-only | grep Touchpad)"
+	if [ tp != "" ]; then
+		xinput set-prop "$tp" "libinput Natural Scrolling Enabled" "1"
+		xinput set-prop "$tp" "libinput Tapping Enabled" "1"
 	fi
 fi
+
+dunst &
+
+[ -e "$SXHKD_FIFO" ] && rm "$SXHKD_FIFO"
+mkfifo "$SXHKD_FIFO"
+sxhkd -s "$SXHKD_FIFO" &
+sxhkd_notify "$SXHKD_FIFO" &
 
 exec dwm
