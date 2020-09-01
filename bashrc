@@ -1,6 +1,5 @@
 [[ $- != *i* ]] && return
 
-export PATH=$HOME/bin:$PATH
 export PS1="\u@\h:\w % "
 export EDITOR=vim
 export GCC_COLORS=
