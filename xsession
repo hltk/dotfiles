@@ -9,10 +9,6 @@ xidle -timeout 180 -program screensaver.sh &
 
 setxkbmap fi
 
-xbanish &
-
-slstatus &
-
 if [ "$(uname -s)" = "Linux" ]; then
 	# enable tap to click and natural scrolling
 	tp="$(xinput list --name-only | grep Touchpad)"
@@ -22,11 +18,13 @@ if [ "$(uname -s)" = "Linux" ]; then
 	fi
 fi
 
-dunst &
-
 [ -e "$SXHKD_FIFO" ] && rm "$SXHKD_FIFO"
 mkfifo "$SXHKD_FIFO"
 sxhkd -s "$SXHKD_FIFO" &
 sxhkd_notify "$SXHKD_FIFO" &
+
+for prog in slstatus xbanish dunst; do
+    [ -x "$(command -v "$prog")" ] && $prog &
+done
 
 exec dwm
