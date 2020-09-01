@@ -6,6 +6,7 @@ XTerm*vt100.metaSendsEscape: true
 XTerm*allowBoldFonts: false
 XTerm.termName: xterm-256color
 
+# reverse bind from https://flak.tedunangst.com/post/xterm-full-reverse
 XTerm.vt100.translations: #override \
 	<Key>F11:set-reverse-video(toggle) \n\
 	Ctrl <Key> minus: smaller-vt-font() \n\
