@@ -1,5 +1,5 @@
-XTerm*foreground: black
-XTerm*background: ivory
+XTerm*foreground: white
+XTerm*background: black
 
 XTerm*vt100.locale: true
 XTerm*vt100.metaSendsEscape: true
@@ -14,23 +14,9 @@ XTerm.vt100.translations: #override \
 	Ctrl Shift <Key>V:	insert-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>C:	copy-selection(CLIPBOARD)
 
-! default, unreadable, small, medium, large, huge
-XTerm*font: -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-1
-XTerm*font1: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-1
-XTerm*font2: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-1
-XTerm*font3: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-1
-XTerm*font4: -*-terminus-medium-*-*-*-22-*-*-*-*-*-iso10646-1
-XTerm*font5: -*-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-1
-XTerm*font6: -*-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-1
-
-! for cmd.exe style
-!XTerm*faceName: Consolas
-!XTerm*faceSize: 12
-!XTerm*renderFont: true
-!XTerm*faceSize1: 8
-!XTerm*faceSize2: 10
-!XTerm*faceSize3: 14
-!XTerm*faceSize4: 16
-!XTerm*faceSize5: 22
-
 *ttyModes: erase ^?
+
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.antialias: 1
+Xft.rgba: rgb 
