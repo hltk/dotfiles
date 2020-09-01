@@ -19,6 +19,7 @@ if [ "$(uname -s)" = "Linux" ]; then
 fi
 
 # from https://github.com/baskerville/sxhkd/blob/master/examples/notification/xinitrc
+export SXHKD_FIFO=/tmp/sxhkd-fifo
 [ -e "$SXHKD_FIFO" ] && rm "$SXHKD_FIFO"
 mkfifo "$SXHKD_FIFO"
 sxhkd -s "$SXHKD_FIFO" &
