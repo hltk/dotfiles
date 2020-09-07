@@ -35,3 +35,5 @@ alias wn="worknotes.sh"
 
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
 	. /usr/share/bash-completion/bash_completion
+
+[[ -r "~/dotfiles/bin/z.sh" ]] && source ~/dotfiles/bin/z.sh
