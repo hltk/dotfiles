@@ -26,7 +26,7 @@ sxhkd -s "$SXHKD_FIFO" &
 sxhkd_notify "$SXHKD_FIFO" &
 
 for prog in slstatus xbanish dunst; do
-    [ -x "$(command -v "$prog")" ] && $prog &
+	[ -x "$(command -v "$prog")" ] && $prog &
 done
 
 exec dwm
