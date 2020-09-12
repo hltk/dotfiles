@@ -18,9 +18,7 @@ if [ "$(uname -s)" = "Linux" ]; then
 	fi
 fi
 
-sxhkd
-
-for prog in xbanish dunst; do
+for prog in xbanish dunst sxhkd; do
 	[ -x "$(command -v "$prog")" ] && $prog &
 done
 
