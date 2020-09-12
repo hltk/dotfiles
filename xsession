@@ -18,15 +18,10 @@ if [ "$(uname -s)" = "Linux" ]; then
 	fi
 fi
 
-# from https://github.com/baskerville/sxhkd/blob/master/examples/notification/xinitrc
-export SXHKD_FIFO=/tmp/sxhkd-fifo
-[ -e "$SXHKD_FIFO" ] && rm "$SXHKD_FIFO"
-mkfifo "$SXHKD_FIFO"
-sxhkd -s "$SXHKD_FIFO" &
-sxhkd_notify "$SXHKD_FIFO" &
+sxhkd
 
-for prog in slstatus xbanish dunst; do
+for prog in xbanish dunst; do
 	[ -x "$(command -v "$prog")" ] && $prog &
 done
 
-exec dwm
+exec i3

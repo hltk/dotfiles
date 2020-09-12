@@ -4,3 +4,7 @@ XF86AudioMute
 	amixer set Master toggle
 XF86MonBrightness{Up,Down}
 	brightnessctl s 5%{+,-}
+XF86Audio{Prev,Next}
+	playerctl {previous,next}
+XF86AudioPlay
+	playerctl play-pause

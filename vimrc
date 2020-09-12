@@ -19,8 +19,7 @@ set noerrorbells t_vb=
 " persistent undo history
 set undofile undodir=~/codes/undodir
 
-
-syntax off
+syntax on
 colo default
 
 " Jump to the last position when reopening a file
