@@ -1,6 +1,11 @@
 [[ $- != *i* ]] && return
 
-export PS1="\u@\h:\w % "
+if [[ -n $SSH_CLIENT ]]; then
+	export PS1="\u@\h:\w % "
+else
+	export PS1="\[\033[47;01m\]\u\[\033[00m\] \w "
+fi
+
 export EDITOR=vim
 export GCC_COLORS=
 
