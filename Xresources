@@ -1,23 +1,11 @@
-XTerm*foreground: white
-XTerm*background: black
-
-XTerm*vt100.locale: true
-XTerm*vt100.metaSendsEscape: true
-XTerm*allowBoldFonts: false
-XTerm.termName: xterm-256color
-
-# reverse bind from https://flak.tedunangst.com/post/xterm-full-reverse
-XTerm.vt100.translations: #override \
-	<Key>F11:set-reverse-video(toggle) \n\
-	Ctrl <Key> minus: smaller-vt-font() \n\
-	Ctrl <Key> plus: larger-vt-font() \n\
-	Ctrl <Key> 0: set-vt-font(d) \n\
-	Ctrl Shift <Key>V:	insert-selection(CLIPBOARD) \n\
-	Ctrl Shift <Key>C:	copy-selection(CLIPBOARD)
-
 *ttyModes: erase ^?
 
 Xft.hinting: 1
 Xft.hintstyle: hintslight
 Xft.antialias: 1
 Xft.rgba: rgb 
+
+URxvt.font: xft:Bitstream Vera Sans Mono:size=16
+URxvt.perl-ext-common: default,matcher,resize-font
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
