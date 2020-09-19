@@ -17,8 +17,4 @@ if [ "$(uname -s)" = "Linux" ]; then
 	fi
 fi
 
-for prog in xbanish dunst; do
-	[ -x "$(command -v "$prog")" ] && $prog &
-done
-
 exec i3
