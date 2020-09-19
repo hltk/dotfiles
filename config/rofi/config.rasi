@@ -1,0 +1,5 @@
+configuration {
+	modi: "window,drun,ssh,combi";
+	theme: "Arc";
+	font: "Bitstream Vera Sans Mono 16";
+ }

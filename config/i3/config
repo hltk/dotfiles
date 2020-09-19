@@ -1,5 +1,5 @@
 set $mod Mod4
-set $font "pango:Inconsolata 12"
+set $font "pango:Bitstream Vera Sans Mono 12"
 set $term "i3-sensible-terminal"
 set $launcher "rofi -show run"
 
@@ -9,13 +9,20 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $launcher
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 2%+"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 2%-"
+bindsym XF86AudioMute exec --no-startup-id "amixer set Master toggle"
+
+bindsym XF86AudioPrev exec --no-startup-id "playerctl previous"
+bindsym XF86AudioNext exec --no-startup-id "playerctl next"
+bindsym XF86AudioPlay exec --no-startup-id "playerctl play-pause"
+
+bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl s 2%+"
+bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl s 2%-"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -97,3 +104,5 @@ bar {
 }
 
 workspace_layout stacking
+
+bindsym Mod4+g exec i3-msg \"rename workspace to \\\"$(rofi -dmenu -p rename)\\\"\"
