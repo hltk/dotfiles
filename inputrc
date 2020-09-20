@@ -1,0 +1,5 @@
+set enable-keypad on
+set show-all-if-ambiguous on
+set visible-stats on
+set page-completions off
+set mark-symlinked-directories on
