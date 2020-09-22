@@ -5,7 +5,7 @@ Xft.hintstyle: hintslight
 Xft.antialias: 1
 Xft.rgba: rgb 
 
-URxvt.font: xft:Bitstream Vera Sans Mono:size=16
+URxvt.font: xft:Bitstream Vera Sans Mono:size=14
 URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
