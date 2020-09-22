@@ -31,3 +31,6 @@ endif
 autocmd FileType gitcommit setlocal nobuflisted
 
 set background=light
+
+" no not wrap lines :p
+set nowrap
