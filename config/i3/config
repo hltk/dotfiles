@@ -111,3 +111,4 @@ bar {
 workspace_layout stacking
 default_border pixel 3
 hide_edge_borders none
+workspace_auto_back_and_forth yes
