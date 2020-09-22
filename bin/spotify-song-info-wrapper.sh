@@ -6,7 +6,7 @@ while true; do
 	if [ -z "${title}" ]; then
 		echo "" > $HOME/.songinfo
 	else
-		echo "${artist} | ${title}" > $HOME/.songinfo
+		echo "${artist} - ${title}" > $HOME/.songinfo
 	fi
 
 	sleep 1
