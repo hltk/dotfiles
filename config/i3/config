@@ -3,17 +3,19 @@ set $font "pango:Bitstream Vera Sans Mono 12"
 set $term "i3-sensible-terminal"
 set $launcher "rofi -show run"
 
+exec --no-startup-id dunst
+exec --no-startup-id xbanish
+
 font $font
 floating_modifier $mod
+
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+p exec $launcher
+bindsym $mod+g exec i3-msg \"rename workspace to \\\"$(rofi -dmenu -p rename)\\\"\"
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-
-exec --no-startup-id dunst
-exec --no-startup-id xbanish
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 2%+"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 2%-"
@@ -107,5 +109,4 @@ bar {
 }
 
 workspace_layout stacking
-
-bindsym $mod+g exec i3-msg \"rename workspace to \\\"$(rofi -dmenu -p rename)\\\"\"
+default_border pixel 2
