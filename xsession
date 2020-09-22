@@ -1,5 +1,10 @@
 . "$HOME/.profile"  # environment setup
 
+# FROM: https://github.com/qbit/dotfiles/blob/master/common/dot_xsession
+# Make ~/.cache a temp dir
+TMP_CACHE=$(mktemp -d /tmp/cache.XXXXXXXXXX)
+ln -sf $TMP_CACHE ~/.cache
+
 xrdb -merge $HOME/.Xresources
 
 xset +dpms                     # turn off screen when idle
