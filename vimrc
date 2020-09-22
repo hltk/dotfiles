@@ -17,7 +17,7 @@ set ignorecase
 set noerrorbells t_vb=
 
 " persistent undo history
-set undofile undodir=~/codes/undodir
+set undofile undodir=~/.cache/vim/undo
 
 syntax on
 colo default

@@ -13,7 +13,7 @@ order += "tztime local"
 
 read_file songinfo {
 	format = "%content"
-	path = "/home/hltk/.songinfo"
+	path = "/home/hltk/.cache/songinfo"
 	color_good = "#FFFFFF"
 }
 
