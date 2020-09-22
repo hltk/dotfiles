@@ -16,6 +16,7 @@ bindsym $mod+g exec i3-msg \"rename workspace to \\\"$(rofi -dmenu -p rename)\\\
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+exec --no-startup-id spotify-song-info-wrapper.sh
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 2%+"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 2%-"

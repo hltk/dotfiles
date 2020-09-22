@@ -3,6 +3,7 @@ general {
 	interval = 1
 }
 
+order += "read_file songinfo"
 order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
@@ -10,6 +11,12 @@ order += "battery all"
 order += "volume master"
 order += "read_file backlight"
 order += "tztime local"
+
+read_file songinfo {
+	format = "%content"
+	path = "/home/hltk/.songinfo"
+	color_good = "#FFFFFF"
+}
 
 wireless _first_ {
 	format_up = "W: (%quality at %essid) %ip"
@@ -35,6 +42,7 @@ volume master {
 read_file backlight {
 	format = "b: %content"
 	path = "/sys/class/backlight/intel_backlight/brightness"
+	color_good = "#FFFFFF"
 }
 
 tztime local {
