@@ -110,30 +110,19 @@ get_battery_perc() {
 	awk -f <(get_awk_source) "${BATTERIES[@]}"
 }
 
-show_notify(){
-	GNOME_ICON="/usr/share/icons/gnome/scalable/status/battery-low-symbolic.svg"
-	XFCE_ICON="/usr/share/icons/elementary-xfce/status/48/battery-low.png"
-	# try to find nice notify icon
-	if [[ -z $NOTIFY_ICON ]]; then
-		if [[ -f $GNOME_ICON ]]; then
-			NOTIFY_ICON="${GNOME_ICON}"
-		elif [[ -f $XFCE_ICON ]]; then
-			NOTIFY_ICON="${XFCE_ICON}"
-		fi
-	fi
-	[[ -n $NOTIFY_ICON ]] && NOTIFY_OPT="-i ${NOTIFY_ICON}"
-	notify-send -u critical "${1}" ${NOTIFY_OPT}
+show_notify() {
+	notify-send -u critical "${1}"
 }
 
-show_message(){
+show_message() {
 	show_notify "$1"
 } >&2
 
-debug(){
+debug() {
 	echo "$1"
 }
 
-main (){
+main () {
 	# Setting defaults
 	UPPER_LIMIT="${UPPER_LIMIT:-20}"
 	UPPER_HALF=$(( UPPER_LIMIT / 2 ))
@@ -175,6 +164,5 @@ main (){
 		sleep "${SLEEP_TIME}"
 	done
 }
-
 
 main
