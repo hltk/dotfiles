@@ -1,6 +1,6 @@
 set $mod Mod4
 set $font "pango:Bitstream Vera Sans Mono 12"
-set $term "i3-sensible-terminal"
+set $term "alacritty"
 set $launcher "rofi -show run -cache-dir ~/.rofi-cache"
 
 font $font

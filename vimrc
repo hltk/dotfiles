@@ -30,7 +30,7 @@ endif
 " disable viminfo for commit msgs
 autocmd FileType gitcommit setlocal nobuflisted
 
-set background=light
+set background=dark
 
 " no not wrap lines :p
 set nowrap

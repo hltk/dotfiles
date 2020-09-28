@@ -3,7 +3,7 @@
 if [[ -n $SSH_CLIENT ]]; then
 	export PS1="\u@\h:\w % "
 else
-	export PS1="\[\033[47;01m\]\u\[\033[00m\] \w "
+	export PS1="\[\033[45;01m\]\u\[\033[00m\] \w "
 fi
 
 alias ls='ls -F'
