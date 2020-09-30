@@ -5,8 +5,6 @@
 TMP_CACHE=$(mktemp -d /tmp/cache.XXXXXXXXXX)
 ln -sf $TMP_CACHE ~/.cache
 
-xrdb -merge $HOME/.Xresources
-
 xset +dpms                     # turn off screen when idle
 xset b off                     # no bell
 xset r rate 200 45             # repeat after 200 ms, 45 char/s
