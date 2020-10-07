@@ -39,6 +39,8 @@ set shiftwidth=4
 
 au BufRead,BufNewFile *.cpp set noexpandtab cindent
 au BufRead,BufNewFile *.cc set noexpandtab cindent
+au BufRead,BufNewFile *.hpp set noexpandtab cindent
+au BufRead,BufNewFile *.hh set noexpandtab cindent
 au BufRead,BufNewFile *.c set noexpandtab cindent
 au BufRead,BufNewFile *.h set noexpandtab cindent
 au BufRead,BufNewFile Makefile* set noexpandtab
