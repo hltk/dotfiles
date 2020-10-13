@@ -3,6 +3,10 @@ syntax on
 colo default
 set background=dark
 
+" cursorline only visible in line number bar, FROM github.com/ollpu/.vim
+set cursorline
+highlight CursorLine ctermbg=none cterm=none
+
 " line numbering
 set number relativenumber
 
@@ -17,6 +21,9 @@ set backspace=indent,eol,start
 
 " enable mouse support
 set mouse=a
+
+" terminal title
+set title
 
 " persistent undo history
 set undofile undodir=~/.cache/vim/undo
