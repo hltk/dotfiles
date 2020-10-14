@@ -1,7 +1,7 @@
 " color scheme settings
 syntax on
-colo default
 set background=dark
+colo corvine
 
 " cursorline only visible in line number bar, FROM github.com/ollpu/.vim
 set cursorline
