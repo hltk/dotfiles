@@ -3,18 +3,13 @@ syntax on
 set background=dark
 colo corvine
 
-" cursorline only visible in line number bar, FROM github.com/ollpu/.vim
 set cursorline
-highlight CursorLine ctermbg=none cterm=none
 
 " line numbering
 set number relativenumber
 
 " disable screen flash
 set noerrorbells t_vb=
-
-" no not wrap lines :p
-set nowrap
 
 " sane settings for backspace key
 set backspace=indent,eol,start
@@ -28,13 +23,31 @@ set title
 " persistent undo history
 set undofile undodir=~/.cache/vim/undo
 
-" indent settings
+" autoindent settings
 set smartindent
 set autoindent
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+
+" show tabs are 8 characters
+set tabstop=8
+" use 2 spaces for indentation
+set softtabstop=2
+set shiftwidth=2
+
+set list
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+
+" Determines whether to use spaces or tabs on the current buffer.
+function TabsOrSpaces()
+  let numTabs=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^\\t"'))
+  let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
+
+  if numTabs > numSpaces
+    set noexpandtab
+  endif
+endfunction
+
+autocmd BufReadPost * call TabsOrSpaces()
 
 " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -42,13 +55,12 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " disable viminfo for commit msgs
 autocmd FileType gitcommit setlocal nobuflisted
 
-" use tabs for c++/c
-autocmd BufRead,BufNewFile *.cpp set noexpandtab cindent
-autocmd BufRead,BufNewFile *.cc set noexpandtab cindent
-autocmd BufRead,BufNewFile *.hpp set noexpandtab cindent
-autocmd BufRead,BufNewFile *.hh set noexpandtab cindent
-autocmd BufRead,BufNewFile *.c set noexpandtab cindent
-autocmd BufRead,BufNewFile *.h set noexpandtab cindent
+" use 4 tabs for c++
+autocmd BufRead,BufNewFile *.cpp set softtabstop=4 shiftwidth=4 cindent
+autocmd BufRead,BufNewFile *.cc set softtabstop=4 shiftwidth=4 cindent
+autocmd BufRead,BufNewFile *.hpp set softtabstop=4 shiftwidth=4 cindent
+autocmd BufRead,BufNewFile *.hh set softtabstop=4 shiftwidth=4 cindent
+" use tabs makefiles
 autocmd BufRead,BufNewFile Makefile* set noexpandtab
 
 " use 2 spaces for ruby
