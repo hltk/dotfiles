@@ -9,6 +9,9 @@ set spell spelllang=en_us
 hi clear SpellBad
 hi SpellBad ctermbg=120
 
+" colourcolumn
+set cc=121
+
 " highlight current line
 set cursorline
 
