@@ -3,6 +3,13 @@ syntax on
 set background=dark
 colo corvine
 
+" use spellcheck
+set spell spelllang=en_us
+" set spellcheck highlighting
+hi clear SpellBad
+hi SpellBad ctermbg=120
+
+" highlight current line
 set cursorline
 
 " line numbering
