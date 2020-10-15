@@ -1,9 +1,9 @@
 [[ $- != *i* ]] && return
 
 if [[ -n $SSH_CLIENT ]]; then
-	export PS1="\u@\h:\w % "
+    export PS1="\u@\h:\w % "
 else
-	export PS1="\[\033[45;01m\]\u\[\033[00m\] \w "
+    export PS1="\[\033[45;01m\]\u\[\033[00m\] \w "
 fi
 
 alias ls='ls -F'
@@ -15,8 +15,8 @@ alias dcm='g++ -Wall -Wextra -pedantic -O1 -Wshadow -Wformat=2 -Wfloat-equal -Wc
 alias format='clang-format -style="{BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 80, AllowShortFunctionsOnASingleLine: None, AllowShortLoopsOnASingleLine: false}" -i'
 
 mkcd() {
-	test -e "$1" || mkdir "$1"
-	cd "$1"
+    test -e "$1" || mkdir "$1"
+    cd "$1"
 }
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -28,6 +28,6 @@ HISTSIZE=100000
 HISTFILESIZE=10000000
 
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-	. /usr/share/bash-completion/bash_completion
+    . /usr/share/bash-completion/bash_completion
 
 [[ -r "$HOME/dotfiles/bin/z.sh" ]] && source $HOME/dotfiles/bin/z.sh
