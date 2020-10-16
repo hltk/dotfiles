@@ -221,7 +221,7 @@ if s:t_Co >= 256
   hi PmenuSbar ctermfg=234 ctermbg=234 cterm=NONE
   hi PmenuSel ctermfg=255 ctermbg=238 cterm=NONE
   hi PmenuThumb ctermfg=240 ctermbg=240 cterm=NONE
-  hi ErrorMsg ctermfg=235 ctermbg=174 cterm=NONE
+  hi ErrorMsg ctermfg=235 ctermbg=117 cterm=NONE
   hi ModeMsg ctermfg=107 ctermbg=NONE cterm=bold
   hi MoreMsg ctermfg=186 ctermbg=NONE cterm=NONE
   hi Question ctermfg=186 ctermbg=NONE cterm=NONE
@@ -243,7 +243,7 @@ if s:t_Co >= 256
   hi DiffText ctermfg=180 ctermbg=238 cterm=NONE
   hi Comment ctermfg=242 ctermbg=NONE cterm=italic
   hi Constant ctermfg=186 ctermbg=NONE cterm=NONE
-  hi Error ctermfg=235 ctermbg=174 cterm=NONE
+  hi Error ctermfg=235 ctermbg=117 cterm=NONE
   hi Identifier ctermfg=182 ctermbg=NONE cterm=NONE
   hi PreProc ctermfg=150 ctermbg=NONE cterm=NONE
   hi Special ctermfg=103 ctermbg=NONE cterm=NONE
@@ -258,10 +258,10 @@ if s:t_Co >= 256
   hi Title ctermfg=252 ctermbg=NONE cterm=bold
   hi Todo ctermfg=255 ctermbg=NONE cterm=NONE
   hi Underlined ctermfg=117 ctermbg=NONE cterm=underline
-  hi SpellBad ctermfg=NONE ctermbg=NONE cterm=undercurl
-  hi SpellCap ctermfg=NONE ctermbg=NONE cterm=undercurl
-  hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=undercurl
-  hi SpellRare ctermfg=NONE ctermbg=NONE cterm=undercurl
+  hi SpellBad ctermfg=235 ctermbg=117 cterm=NONE
+  hi SpellCap ctermfg=235 ctermbg=117 cterm=NONE
+  hi SpellLocal ctermfg=235 ctermbg=117 cterm=NONE
+  hi SpellRare ctermfg=235 ctermbg=117 cterm=NONE
   if !s:italics
     hi Comment cterm=NONE
     hi SpecialComment cterm=NONE

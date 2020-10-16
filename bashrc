@@ -27,7 +27,4 @@ HISTIGNORE=
 HISTSIZE=100000
 HISTFILESIZE=10000000
 
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-    . /usr/share/bash-completion/bash_completion
-
 [[ -r "$HOME/dotfiles/bin/z.sh" ]] && source $HOME/dotfiles/bin/z.sh
