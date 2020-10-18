@@ -5,9 +5,6 @@ colo corvine
 
 " use spellcheck
 set spell spelllang=en_us
-" set spellcheck highlighting
-hi clear SpellBad
-hi SpellBad ctermbg=120
 
 " colourcolumn
 set cc=121
@@ -65,13 +62,15 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " disable viminfo for commit msgs
 autocmd FileType gitcommit setlocal nobuflisted
 
-" use 4 tabs for c++
+" use 4 tabs for c++, python
 autocmd BufRead,BufNewFile *.cpp set softtabstop=4 shiftwidth=4 cindent
 autocmd BufRead,BufNewFile *.cc set softtabstop=4 shiftwidth=4 cindent
 autocmd BufRead,BufNewFile *.hpp set softtabstop=4 shiftwidth=4 cindent
 autocmd BufRead,BufNewFile *.hh set softtabstop=4 shiftwidth=4 cindent
+
+autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4
 " use tabs makefiles
 autocmd BufRead,BufNewFile Makefile* set noexpandtab
 
 " use 2 spaces for ruby
-autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2
+autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 nospell
