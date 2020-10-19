@@ -69,9 +69,13 @@ function TabsOrSpaces()
   let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
 
   if numTabs > numSpaces
+    set tabstop=8
+    set shiftwidth=8
+    set softtabstop=8
     set noexpandtab
+  else
+    set expandtab
   endif
 endfunction
 
 autocmd BufReadPost * call TabsOrSpaces()
-
