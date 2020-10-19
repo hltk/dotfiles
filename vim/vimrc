@@ -44,18 +44,6 @@ set shiftwidth=2
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
-" Determines whether to use spaces or tabs on the current buffer.
-function TabsOrSpaces()
-  let numTabs=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^\\t"'))
-  let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
-
-  if numTabs > numSpaces
-    set noexpandtab
-  endif
-endfunction
-
-autocmd BufReadPost * call TabsOrSpaces()
-
 " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -74,3 +62,16 @@ autocmd BufRead,BufNewFile Makefile* set noexpandtab
 
 " use 2 spaces for ruby
 autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 nospell
+
+" Determines whether to use spaces or tabs on the current buffer.
+function TabsOrSpaces()
+  let numTabs=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^\\t"'))
+  let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
+
+  if numTabs > numSpaces
+    set noexpandtab
+  endif
+endfunction
+
+autocmd BufReadPost * call TabsOrSpaces()
+
