@@ -6,8 +6,8 @@ colo corvine
 " use spellcheck
 set spell spelllang=en_us
 
-" colourcolumn
-set cc=121
+set cc=101
+set textwidth=101
 
 " highlight current line
 set cursorline
