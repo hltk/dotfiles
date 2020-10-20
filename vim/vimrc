@@ -7,7 +7,7 @@ colo corvine
 set spell spelllang=en_us
 
 set cc=101
-set textwidth=101
+set textwidth=100
 
 " highlight current line
 set cursorline
@@ -61,7 +61,7 @@ autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4
 autocmd BufRead,BufNewFile Makefile* set noexpandtab
 
 " use 2 spaces for ruby
-autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 nospell
+autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 nospell cc=81 textwidth=80
 
 " Determines whether to use spaces or tabs on the current buffer.
 function TabsOrSpaces()
