@@ -2,15 +2,13 @@
 syntax on
 set background=dark
 colo corvine
+set cursorline
 
 " use spellcheck
 set spell spelllang=en_us
 
-set cc=101
-set textwidth=100
-
-" highlight current line
-set cursorline
+" max line length
+set cc=101 textwidth=100
 
 " line numbering
 set number relativenumber
@@ -31,18 +29,16 @@ set title
 set undofile undodir=~/.cache/vim/undo
 
 " autoindent settings
-set smartindent
-set autoindent
-set expandtab
+set smartindent autoindent expandtab
 
-" show tabs are 8 characters
+" show tabs as 8 characters
 set tabstop=8
-" use 2 spaces for indentation
-set softtabstop=2
-set shiftwidth=2
 
-set list
-set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+" default to using 4 spaces for indentation
+set softtabstop=4 shiftwidth=4
+
+" listchars = replace hidden characters with visible ones
+set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
 " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -50,17 +46,17 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " disable viminfo for commit msgs
 autocmd FileType gitcommit setlocal nobuflisted
 
-" use 4 tabs for c++, python
+" use 4-space indentation for C++ and Python
 autocmd BufRead,BufNewFile *.cpp set softtabstop=4 shiftwidth=4 cindent
 autocmd BufRead,BufNewFile *.cc set softtabstop=4 shiftwidth=4 cindent
 autocmd BufRead,BufNewFile *.hpp set softtabstop=4 shiftwidth=4 cindent
 autocmd BufRead,BufNewFile *.hh set softtabstop=4 shiftwidth=4 cindent
-
 autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4
-" use tabs makefiles
-autocmd BufRead,BufNewFile Makefile* set noexpandtab
 
-" use 2 spaces for ruby
+" use tabs Makefiles
+autocmd BufRead,BufNewFile *Makefile* set noexpandtab
+
+" Ruby-specific settings
 autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 nospell cc=81 textwidth=80
 
 " Determines whether to use spaces or tabs on the current buffer.
@@ -69,10 +65,7 @@ function TabsOrSpaces()
   let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
 
   if numTabs > numSpaces
-    set tabstop=8
-    set shiftwidth=8
-    set softtabstop=8
-    set noexpandtab
+    set tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
   else
     set expandtab
   endif
