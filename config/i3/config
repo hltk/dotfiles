@@ -10,6 +10,7 @@ workspace_layout stacking
 default_border pixel 3
 hide_edge_borders none
 
+exec --no-startup-id clipmenud
 exec --no-startup-id dunst
 exec --no-startup-id xbanish
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
