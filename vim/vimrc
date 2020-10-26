@@ -4,6 +4,9 @@ set background=dark
 colo corvine
 set cursorline
 
+" search settings
+set hlsearch incsearch
+
 " use spellcheck
 set spell spelllang=en_us
 
