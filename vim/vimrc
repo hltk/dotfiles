@@ -46,31 +46,18 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " disable viminfo for commit msgs
 autocmd FileType gitcommit setlocal nobuflisted cc=81 textwidth=80
 
-" use 2-space indentation for C++
-autocmd BufRead,BufNewFile *.cpp set softtabstop=2 shiftwidth=2 cindent cc=101 textwidth=100
-autocmd BufRead,BufNewFile *.cc set softtabstop=2 shiftwidth=2 cindent cc=101 textwidth=100
-autocmd BufRead,BufNewFile *.hpp set softtabstop=2 shiftwidth=2 cindent cc=101 textwidth=100
-autocmd BufRead,BufNewFile *.hh set softtabstop=2 shiftwidth=2 cindent cc=101 textwidth=100
-" use 4-space indentation Python
-autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4 cc=101 textwidth=100
-
-" use tabs Makefiles
-autocmd BufRead,BufNewFile *Makefile* set noexpandtab cc=101 textwidth=100
+" use tabs c++, c and Makefiles
+autocmd BufRead,BufNewFile *Makefile* set noexpandtab
+autocmd BufRead,BufNewFile *.cpp set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8 cindent
+autocmd BufRead,BufNewFile *.hpp set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8 cindent
+autocmd BufRead,BufNewFile *.cc set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8 cindent
+autocmd BufRead,BufNewFile *.hh set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8 cindent
+autocmd BufRead,BufNewFile *.c set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8 cindent
 
 " Ruby-specific settings
+" use 80-character lines as specified in the community-made 'Ruby Style Guide'
 autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 nospell cc=81 textwidth=80
-autocmd BufRead,BufNewFile *.fcgi set tabstop=2 softtabstop=2 shiftwidth=2 nospell cc=81 textwidth=80
 
-" Determines whether to use spaces or tabs on the current buffer.
-function TabsOrSpaces()
-  let numTabs=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^\\t"'))
-  let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
-
-  if numTabs > numSpaces
-    set tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-  else
-    set expandtab
-  endif
-endfunction
-
-autocmd BufReadPost * call TabsOrSpaces()
+" use 4-space indentation Python
+" use 79-character lines as specified in PEP8
+autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4 cc=80 textwidth=79
