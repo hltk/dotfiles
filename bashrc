@@ -11,7 +11,6 @@ alias l='ls'
 alias gdb='gdb -q'
 alias wn="worknotes.sh"
 alias dcm='g++ -Wall -Wextra -pedantic -O1 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector -std=c++17 -g3 -fmax-errors=1'
-alias format='clang-format -style="{BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 100, AllowShortFunctionsOnASingleLine: Empty, AllowShortLoopsOnASingleLine: false}" -i'
 
 mkcd() {
     test -e "$1" || mkdir "$1"
