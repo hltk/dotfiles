@@ -1,6 +1,6 @@
 set $mod Mod4
 set $font "pango:Bitstream Vera Sans Mono 12"
-set $term "alacritty"
+set $term "urxvt -bg '#000000' -fg '#ffffff' -fn 'xft:Bitstream Vera Sans Mono:size=14'"
 set $launcher "rofi -show run -cache-dir ~/.rofi-cache"
 
 font $font
