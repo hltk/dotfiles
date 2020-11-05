@@ -1,6 +1,6 @@
 set $mod Mod4
 set $font "pango:Bitstream Vera Sans Mono 12"
-set $term "urxvt -bg '#000000' -fg '#ffffff' -fn 'xft:Bitstream Vera Sans Mono:size=14'"
+set $term "urxvt -bg '#000000' -fg '#ffffff' -fn 'xft:Bitstream Vera Sans Mono:size=14' -perl-ext-common 'default,matcher,resize-font' -url-launcher '/usr/bin/xdg-open' -matcher-button '1'"
 set $launcher "rofi -show run -cache-dir ~/.rofi-cache"
 
 font $font
