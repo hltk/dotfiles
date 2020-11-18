@@ -1,17 +1,17 @@
 " color scheme settings
-syntax on
-set background=dark
-colo corvine
-set cursorline
+" syntax on
+" set background=dark
+" colo corvine
+" set cursorline
 
 " search settings
 set hlsearch incsearch
 
 " use spellcheck
-set spell spelllang=en_us
+" set spell spelllang=en_us
 
 " line numbering
-set number relativenumber
+" set number relativenumber
 
 " disable screen flash
 set noerrorbells t_vb=
@@ -38,7 +38,7 @@ set tabstop=8
 set softtabstop=4 shiftwidth=4
 
 " listchars = replace hidden characters with visible ones
-set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+" set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
 " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

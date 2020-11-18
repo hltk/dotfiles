@@ -1,7 +1,6 @@
 set $mod Mod4
-set $font "pango:Bitstream Vera Sans Mono 12"
-set $term "alacritty"
-# "urxvt -bg '#000000' -fg '#ffffff' -fn 'xft:Bitstream Vera Sans Mono:size=14' -perl-ext-common 'default,matcher,resize-font' -url-launcher '/usr/bin/xdg-open' -matcher-button '1'"
+set $font "pango:Bitstream Vera Sans Mono 10"
+set $term "urxvt -fn 'xft:Bitstream Vera Sans Mono:size=10' -perl-ext-common 'default,matcher,resize-font' -url-launcher '/usr/bin/xdg-open' -matcher-button '1'"
 set $launcher "rofi -show run -cache-dir ~/.rofi-cache"
 
 font $font
@@ -16,7 +15,6 @@ exec --no-startup-id dunst
 exec --no-startup-id xbanish
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id spotify-song-info-wrapper.sh
 exec --no-startup-id i3-battery-popup.sh
 
 bindsym $mod+Return exec $term
