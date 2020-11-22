@@ -12,7 +12,7 @@ mkcd() {
     cd "$1"
 }
 
-# don't put duplicate lines or lines starting with space in the history.
+# don't put duplicate lines or lines starting with a space in the history.
 HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
