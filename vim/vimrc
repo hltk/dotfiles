@@ -1,17 +1,9 @@
-" color scheme settings
-" syntax on
-" set background=dark
-" colo corvine
-" set cursorline
+" colorscheme settings
+colo jcs
+syntax on
 
 " search settings
 set hlsearch incsearch
-
-" use spellcheck
-" set spell spelllang=en_us
-
-" line numbering
-" set number relativenumber
 
 " disable screen flash
 set noerrorbells t_vb=
