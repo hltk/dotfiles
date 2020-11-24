@@ -2,6 +2,10 @@
 
 export PS1="\u@\h$ "
 
+alias rustc='rustc --color=never'
+alias clang='clang -fno-color-diagnostics'
+alias clang++='clang -fno-color-diagnostics'
+
 alias ls='ls -F'
 alias l='ls'
 alias gdb='gdb -q'
