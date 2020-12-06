@@ -16,6 +16,7 @@ exec --no-startup-id xbanish
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id i3-battery-popup.sh
+exec --no-startup-id blueman-applet
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
