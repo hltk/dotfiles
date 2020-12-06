@@ -1,5 +1,5 @@
 " colorscheme settings
-colo jcs
+colo default
 syntax on
 
 " search settings

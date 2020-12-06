@@ -24,4 +24,9 @@ HISTIGNORE=
 HISTSIZE=100000
 HISTFILESIZE=10000000
 
-[[ -r "$HOME/dotfiles/bin/z.sh" ]] && source $HOME/dotfiles/bin/z.sh
+# [[ -r "$HOME/dotfiles/bin/z.sh" ]] && source $HOME/dotfiles/bin/z.sh
+
+if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
+then
+	exec fish
+fi
