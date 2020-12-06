@@ -3,3 +3,4 @@ export PATH=$HOME/dotfiles/bin:$PATH
 export EDITOR=vim
 export CM_LAUNCHER=rofi
 export GCC_COLORS=
+export PYTHONDONTWRITEBYTECODE=1
