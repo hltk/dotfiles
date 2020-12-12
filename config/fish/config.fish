@@ -15,7 +15,7 @@ function l
 end
 
 function gdb
-    command gdb -q
+    command gdb -q $argv
 end
 
 function dcm
