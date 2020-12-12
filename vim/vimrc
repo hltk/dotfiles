@@ -1,6 +1,7 @@
 " colorscheme settings
 colo default
 syntax on
+set background=dark
 
 " search settings
 set hlsearch incsearch
