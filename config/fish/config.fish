@@ -10,10 +10,6 @@ function clang++
     clang -fno-color-diagnostics
 end
 
-function ls
-    command ls -F
-end
-
 function l
     ls
 end
