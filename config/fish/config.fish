@@ -23,6 +23,6 @@ function dcm
 end
 
 function mkcd
-    test -e "$1" || mkdir "$1"
-    cd "$1"
+    test -e "$argv[1]" || mkdir "$argv[1]"
+    cd "$argv[1]"
 end
