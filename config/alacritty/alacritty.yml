@@ -1,18 +1,18 @@
 font:
   normal:
-    family: "Bitstream Vera Sans Mono"
+    family: "Source Code Pro"
     style: Regular
 
   bold:
-    family: "Bitstream Vera Sans Mono"
+    family: "Source Code Pro"
     style: Bold
 
   italic:
-    family: "Bitstream Vera Sans Mono"
+    family: "Source Code Pro"
     style: Italic
 
   bold_italic:
-    family: "Bitstream Vera Sans Mono"
+    family: "Source Code Pro"
     style: Bold Italic
 
   size: 11
