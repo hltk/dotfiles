@@ -1,7 +1,6 @@
 set $mod Mod4
-set $font "pango:Source Code Pro 12"
+set $font "pango:monospace 12"
 set $term alacritty
-# "urxvt -fn 'xft:Source Code Pro:size=12' -perl-ext-common 'default,matcher,resize-font' -url-launcher '/usr/bin/xdg-open' -matcher-button '1'"
 set $launcher "rofi -show run -cache-dir ~/.rofi-cache"
 
 font $font
