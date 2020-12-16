@@ -26,3 +26,5 @@ function mkcd
     test -e "$argv[1]" || mkdir "$argv[1]"
     cd "$argv[1]"
 end
+
+set fish_greeting
