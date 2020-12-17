@@ -7,8 +7,7 @@ font $font
 floating_modifier $mod
 
 workspace_layout stacking
-default_border pixel 3
-hide_edge_borders none
+default_border normal 1
 
 exec --no-startup-id clipmenud
 exec --no-startup-id dunst
@@ -133,5 +132,4 @@ client.focused_inactive #2B2F40 #ECECE8 #2B2F40 #2B2F40   #5F676A
 client.unfocused        #2B2F40 #ECECE8 #2B2F40 #2B2F40   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-
 client.background       #FFFFFF
