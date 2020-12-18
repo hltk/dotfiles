@@ -66,3 +66,5 @@ function TabsOrSpaces()
 endfunction
 
 autocmd BufReadPost * call TabsOrSpaces()
+
+set clipboard=unnamedplus
