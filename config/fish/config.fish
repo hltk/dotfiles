@@ -7,7 +7,7 @@ function clang
 end
 
 function clang++
-    command clang -fno-color-diagnostics $argv
+    command clang++ -fno-color-diagnostics $argv
 end
 
 function l
