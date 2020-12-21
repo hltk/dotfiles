@@ -1,7 +1,7 @@
 " colorscheme settings
 colo default
 syntax on
-set background=light
+set background=dark
 
 " search settings
 set hlsearch incsearch
@@ -67,4 +67,5 @@ endfunction
 
 autocmd BufReadPost * call TabsOrSpaces()
 
+" use system clipboard
 set clipboard=unnamedplus
