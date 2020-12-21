@@ -3,6 +3,9 @@ colo default
 syntax on
 set background=dark
 
+" use line numbers
+set number
+
 " search settings
 set hlsearch incsearch
 
