@@ -1,3 +1,7 @@
+function v
+    vim $argv
+end
+
 function rustc
     command rustc --color=never $argv
 end
