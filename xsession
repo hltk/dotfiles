@@ -19,5 +19,3 @@ if [ "$(uname -s)" = "Linux" ]; then
 		xinput set-prop "$tp" "libinput Tapping Enabled" "1"
 	fi
 fi
-
-exec i3
