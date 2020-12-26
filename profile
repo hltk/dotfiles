@@ -4,4 +4,5 @@ export EDITOR=vim
 export CM_LAUNCHER=rofi
 export GCC_COLORS=
 export PYTHONDONTWRITEBYTECODE=1
-export QT_QPA_PLATFORM=wayland
+#export MOZ_ENABLE_WAYLAND=1
+#export QT_QPA_PLATFORM=wayland
