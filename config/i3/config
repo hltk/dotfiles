@@ -1,7 +1,7 @@
 set $mod Mod4
 set $font "pango:Cantarell Bold 11"
 set $term alacritty
-set $launcher "rofi -show run -cache-dir ~/.rofi-cache"
+set $launcher "rofi -show run
 
 font $font
 floating_modifier $mod
@@ -9,7 +9,6 @@ floating_modifier $mod
 workspace_layout stacking
 default_border normal 1
 
-exec --no-startup-id clipmenud
 exec --no-startup-id dunst
 exec --no-startup-id xbanish
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
