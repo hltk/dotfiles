@@ -55,7 +55,7 @@ autocmd BufRead,BufNewFile *.hh set softtabstop=2 shiftwidth=2 cindent expandtab
 " use 80-character lines as specified in the community-made 'Ruby Style Guide'
 autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 cc=81
 
-" Python:
+" Python
 " use 4 spaces for indentation
 " use 79-character long lines as specified in PEP8
 autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4 cc=80 textwidth=79
@@ -64,6 +64,8 @@ autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4 cc=80 textwidth=7
 " use two spaces for indentation
 autocmd BufRead,BufNewFile *.lua set tabstop=2 softtabstop=2 shiftwidth=2
 
+
+" from https://unix.stackexchange.com/a/63197
 function TabsOrSpaces()
   let numTabs=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^\\t"'))
   let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
@@ -72,7 +74,6 @@ function TabsOrSpaces()
     set tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
   endif
 endfunction
-
 autocmd BufReadPost * call TabsOrSpaces()
 
 " use system clipboard
