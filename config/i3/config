@@ -113,17 +113,6 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
 	status_command i3status
-	colors {
-		background #F5F5F5
-		statusline #2B2F40
-		separator  #2B2F40
-
-		focused_workspace  #0F3E7B #4271AE #FFFFFF
-		active_workspace   #2B2F40 #D0D0D0 #2B2F40
-		inactive_workspace #2B2F40 #ECECE8 #2B2F40
-		urgent_workspace   #2F343A #900000 #FFFFFF
-		binding_mode       #2F343A #900000 #FFFFFF
-	}
 }
 
 # class                 border  bground text    indicator child_border
