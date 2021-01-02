@@ -2,13 +2,9 @@
 
 export PS1="λ "
 
-# disable colors
-alias ls="ls --color=never"
-alias grep="grep --color=never"
-export GCC_COLORS=
-alias rustc='rustc --color=never'
-alias clang='clang -fno-color-diagnostics'
-alias clang++='clang -fno-color-diagnostics'
+# enable colors
+alias ls="ls --color=always"
+alias grep="grep --color=always"
 
 alias ls="ls -F"
 alias l='ls'
