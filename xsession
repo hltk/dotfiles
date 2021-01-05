@@ -4,7 +4,7 @@ xset +dpms                     # turn off screen when idle
 xset b off                     # no bell
 xset r rate 200 45             # repeat after 200 ms, 45 char/s
 
-setxkbmap fi
+setxkbmap fi -option caps:escape
 
 if [ "$(uname -s)" = "Linux" ]; then
 	# enable tap to click and natural scrolling
