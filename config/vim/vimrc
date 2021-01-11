@@ -3,6 +3,10 @@ colo default
 syntax on
 set background=dark
 
+" highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 " use line numbers
 set number
 
