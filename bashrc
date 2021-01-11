@@ -1,27 +1,15 @@
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt autocd extendedglob
-bindkey -e
-zstyle :compinstall filename '/home/hltk/.zshrc'
+[[ $- != *i* ]] && return
 
-autoload -Uz compinit
-compinit
 
-# simplified version of Michael Stapelberg's (michael.stapelberg.ch) prompt
 fg_green=$'%{\e[1;32m%}'
 fg_no_colour=$'%{\e[0m%}'
-PROMPT="%K{cyan}%F{black}%m%k%f ${fg_green}%~${fg_no_colour} %% "
-
-bindkey "^[[3~" delete-char
-bindkey "^[[H"   beginning-of-line
-bindkey "^[[F"   end-of-line
+PS1="%K{cyan}%F{black}%m%k%f ${fg_green}%~${fg_no_colour} %% "
 
 # enable colors
 alias ls="ls --color=always"
 alias grep="grep --color=always"
 
-alias ls="ls --color=always -F"
+alias ls="ls -F"
 alias l='ls'
 alias v="vim"
 alias gdb='gdb -q'
