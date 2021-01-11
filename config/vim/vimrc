@@ -94,6 +94,7 @@ autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
 map <C-j> :cn<CR>
 map <C-k> :cp<CR>
 
+" no not clutter my home directory
 set undodir=$XDG_DATA_HOME/vim/undo
 set directory=$XDG_DATA_HOME/vim/swap
 set backupdir=$XDG_DATA_HOME/vim/backup
