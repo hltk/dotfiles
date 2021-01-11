@@ -1,12 +1,11 @@
 [[ $- != *i* ]] && return
 
-export PS1="\[\e[30;44m\]\h\[\e[m\] \[\e[32m\]\w\[\e[m\] % "
+PS1='\[\e[0;30;48;5;81m\]\h\[\e[m\] \[\e[0;38;5;40m\]\w\[\e[m\] \[\e[0m\]%\[\e0 ' 
 
 # enable colors
-alias ls="ls --color=always"
 alias grep="grep --color=always"
 
-alias ls="ls -F"
+alias ls="ls -F --color=always"
 alias l='ls'
 alias v="vim"
 alias gdb='gdb -q'
