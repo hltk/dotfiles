@@ -1,9 +1,6 @@
 [[ $- != *i* ]] && return
 
-
-fg_green=$'%{\e[1;32m%}'
-fg_no_colour=$'%{\e[0m%}'
-PS1="%K{cyan}%F{black}%m%k%f ${fg_green}%~${fg_no_colour} %% "
+export PS1="\[\e[30;44m\]\h\[\e[m\] \[\e[32m\]\w\[\e[m\] % "
 
 # enable colors
 alias ls="ls --color=always"
