@@ -1,17 +1,17 @@
 font:
   normal:
-    family: "xos4 Terminus"
+    family: "spleen"
     style: Regular
   bold:
-    family: "xos4 Terminus"
+    family: "spleen"
     style: Bold
 
   italic:
-    family: "xos4 Terminus"
+    family: "spleen"
     style: Italic
 
   bold_italic:
-    family: "xos4 Terminus"
+    family: "spleen"
     style: Bold Italic
 
   size: 12
