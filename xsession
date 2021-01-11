@@ -13,11 +13,4 @@ if [ "$(uname -s)" = "Linux" ]; then
 	fi
 fi
 
-feh --bg-scale $(find /usr/share/backgrounds/ -type f | grep -v 'xml' | sort -R | head -n 1)
-
-# caja-wallpaper 1.24.1-1
-# mate-backgrounds 1.24.1-1
-# ubuntu-backgrounds-bionic 18.04.1-1
-# ubuntu-backgrounds-focal 20.04.2-1
-# ubuntu-backgrounds-trusty 14.04.0.1-2
-# ubuntu-backgrounds-xenial 16.04.1-1
+xsetroot -solid "#3a6ea5"
