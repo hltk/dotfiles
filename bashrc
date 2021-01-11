@@ -1,3 +1,5 @@
+[[ $PS1 && -f $HOME/profile ]] && . $HOME/profile
+
 PS1='\[\e[0;30;48;5;81m\]\h\[\e[m\] \[\e[0;38;5;40m\]\w\[\e[m\] \[\e[0m\]%\[\e0 ' 
 
 # enable colors
