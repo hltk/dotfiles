@@ -34,9 +34,22 @@ export XCOMPOSEFILE="$XDG_CONFIG_HOME"/x11/compose
 export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
 export _Z_DATA="$XDG_DATA_HOME/z"
 
-export PATH="$HOME"/dotfiles/bin:$PATH
-export PATH="$XDG_DATA_HOME"/gem/bin/:$PATH
-export PATH="$PATH":"$GOPATH"/bin
+# Copied from arch linux's /etc/profile:
+# Append "$1" to $PATH when not already in.
+# This function API is accessible to scripts in /etc/profile.d
+append_path () {
+	case ":$PATH:" in
+		*:"$1":*)
+			;;
+		*)
+			PATH="${PATH:+$PATH:}$1"
+	esac
+}
+
+[ -d "$HOME"/dotfiles/bin ] && append_path "$HOME/dotfiles/bin"
+[ -d "$GEM_HOME"/bin ] && append_path "$GEM_HOME/bin"
+[ -d "$GOPATH"/bin ] && append_path "$GOPATH/bin"
+
 
 export LANG=en_US.UTF-8
 export EDITOR=vim
