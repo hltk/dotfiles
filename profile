@@ -18,6 +18,7 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GOPATH="$XDG_DATA_HOME"/go
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export HISTFILE="$XDG_DATA_HOME"/bash/history
 export INPUTRC="$XDG_CONFIG_HOME"/inputrc
@@ -33,7 +34,10 @@ export XCOMPOSEFILE="$XDG_CONFIG_HOME"/x11/compose
 export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
 export _Z_DATA="$XDG_DATA_HOME/z"
 
-export LANG=en_US.UTF-8
 export PATH="$HOME"/dotfiles/bin:$PATH
+export PATH="$XDG_DATA_HOME"/gem/bin/:$PATH
+export PATH="$PATH":"$GOPATH"/bin
+
+export LANG=en_US.UTF-8
 export EDITOR=vim
 export PYTHONDONTWRITEBYTECODE=1
