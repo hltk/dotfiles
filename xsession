@@ -29,5 +29,6 @@ nm-applet &
 i3-battery-popup.sh &
 blueman-applet &
 pasystray &
+sxhkd &
 
 exec "$HOME"/codes/src/dwm/dwm
