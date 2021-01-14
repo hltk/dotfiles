@@ -3,7 +3,9 @@ xset b off                     # no bell
 xset r rate 200 45             # repeat after 200 ms, 45 char/s
 
 # map caps lock to escape
-setxkbmap fi -option caps:escape
+# disable 'dead keys' (https://en.wikipedia.org/wiki/Dead_key)
+# to fix a problem with ~ not working in Alacritty, xterm and urxvt
+setxkbmap fi -option caps:escape -variant nodeadkeys
 
 # disable escape
 xmodmap -e "keycode 9 = NoSymbol"
