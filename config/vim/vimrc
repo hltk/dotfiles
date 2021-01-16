@@ -31,6 +31,9 @@ set undofile
 " autoindent settings
 set smartindent autoindent expandtab
 
+" formatoptions like: r = insert comment when pressing enter in insert mode
+set formatoptions=tcqro
+
 " show tabs as 8 characters
 set tabstop=8
 
