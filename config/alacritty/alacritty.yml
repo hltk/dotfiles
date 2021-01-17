@@ -1,20 +1,5 @@
 font:
-  normal:
-    family: "spleen"
-    style: Regular
-  bold:
-    family: "spleen"
-    style: Bold
-
-  italic:
-    family: "spleen"
-    style: Italic
-
-  bold_italic:
-    family: "spleen"
-    style: Bold Italic
-
-  size: 12
+  size: 9
 
 key_bindings:
   - { key: F,   mods: Control,           action: SearchForward    }
