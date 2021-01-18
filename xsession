@@ -21,16 +21,4 @@ fi
 
 xsetroot -solid "#3a6ea5"
 
-xss-lock --transfer-sleep-lock -- /usr/bin/slock &
-
-while true; do xsetroot -name "$(date)"; sleep 1; done &
-
-dunst &
-xbanish &
-nm-applet &
-i3-battery-popup.sh &
-blueman-applet &
-pasystray &
-sxhkd &
-
-exec "$HOME"/codes/src/dwm/dwm
+exec i3
