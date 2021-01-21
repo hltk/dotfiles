@@ -1,52 +1,24 @@
-" colorscheme settings
-colo default
+colo default                                     " colorscheme settings
 syntax on
 set background=dark
-
-" highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-
-" use line numbers
-set number
-
-" search settings
-set hlsearch incsearch
-
-" disable screen flash
-set noerrorbells t_vb=
-
-" sane settings for backspace key
-set backspace=indent,eol,start
-
-" enable mouse support
-set mouse=a
-
-" terminal title
-set title
-
-" persistent undo history
-set undofile
-
-" autoindent settings
-set smartindent autoindent expandtab
-
-" formatoptions like: r = insert comment when pressing enter in insert mode
-set formatoptions=tcqro
-
-" keep the cursor near the center of the screen
-set scrolloff=5
-
-" Jump to the last position when reopening a file
+match ExtraWhitespace /\s\+$/                    " highlight trailing whitespace
+set number                                       " use line numbers
+set hlsearch incsearch                           " search settings
+set noerrorbells t_vb=                           " disable screen flash
+set backspace=indent,eol,start                   " sane settings for backspace key
+set mouse=a                                      " enable mouse support
+set title                                        " terminal title
+set smartindent autoindent expandtab             " autoindent settings
+set formatoptions=tcqro                          " r = insert comment when pressing enter in insert mode
+set scrolloff=5                                  " keep the cursor near the center of the screen
+                                                 " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" disable viminfo for commit msgs
 autocmd FileType gitcommit setlocal nobuflisted cc=81 textwidth=80
 
-" use tabs for Makefiles
 autocmd BufRead,BufNewFile *Makefile* set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8
 
-" use 2-space indentation for C++
 autocmd BufRead,BufNewFile *.cpp set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
 autocmd BufRead,BufNewFile *.cc set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
 autocmd BufRead,BufNewFile *.hpp set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
@@ -54,29 +26,9 @@ autocmd BufRead,BufNewFile *.hh set softtabstop=8 shiftwidth=8 shiftwidth=8 cind
 
 autocmd BufNewFile main.cpp read ~/codes/sync/template.cpp | normal ggdd
 
-" Ruby-specific settings
-" use 80-character lines as specified in the community-made 'Ruby Style Guide'
 autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 cc=81
-
-" Python
-" use 4 spaces for indentation
-" use 79-character long lines as specified in PEP8
 autocmd BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 cc=80 textwidth=79
-
-" Lua-specific settings
-" use two spaces for indentation
 autocmd BufRead,BufNewFile *.lua set tabstop=2 softtabstop=2 shiftwidth=2
-
-" from https://unix.stackexchange.com/a/63197
-function TabsOrSpaces()
-  let numTabs=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^\\t"'))
-  let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
-
-  if numTabs > numSpaces
-    set tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-  endif
-endfunction
-autocmd BufReadPost * call TabsOrSpaces()
 
 " use system clipboard
 set clipboard=unnamedplus
@@ -96,7 +48,7 @@ map <C-j> :cn<CR>
 map <C-k> :cp<CR>
 
 " no not clutter my home directory
-set undodir=$XDG_DATA_HOME/vim/undo
+set undofile undodir=$XDG_DATA_HOME/vim/undo
 set directory=$XDG_DATA_HOME/vim/swap
 set backupdir=$XDG_DATA_HOME/vim/backup
 set viewdir=$XDG_DATA_HOME/vim/view
