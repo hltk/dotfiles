@@ -34,12 +34,6 @@ set smartindent autoindent expandtab
 " formatoptions like: r = insert comment when pressing enter in insert mode
 set formatoptions=tcqro
 
-" show tabs as 8 characters
-set tabstop=8
-
-" default to using 4 spaces for indentation
-set softtabstop=4 shiftwidth=4 expandtab
-
 " keep the cursor near the center of the screen
 set scrolloff=5
 
@@ -53,10 +47,10 @@ autocmd FileType gitcommit setlocal nobuflisted cc=81 textwidth=80
 autocmd BufRead,BufNewFile *Makefile* set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8
 
 " use 2-space indentation for C++
-autocmd BufRead,BufNewFile *.cpp set softtabstop=2 shiftwidth=2 cindent expandtab
-autocmd BufRead,BufNewFile *.cc set softtabstop=2 shiftwidth=2 cindent expandtab
-autocmd BufRead,BufNewFile *.hpp set softtabstop=2 shiftwidth=2 cindent expandtab
-autocmd BufRead,BufNewFile *.hh set softtabstop=2 shiftwidth=2 cindent expandtab
+autocmd BufRead,BufNewFile *.cpp set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
+autocmd BufRead,BufNewFile *.cc set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
+autocmd BufRead,BufNewFile *.hpp set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
+autocmd BufRead,BufNewFile *.hh set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
 
 autocmd BufNewFile main.cpp read ~/codes/sync/template.cpp | normal ggdd
 
@@ -67,7 +61,7 @@ autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 cc=81
 " Python
 " use 4 spaces for indentation
 " use 79-character long lines as specified in PEP8
-autocmd BufRead,BufNewFile *.py set softtabstop=4 shiftwidth=4 cc=80 textwidth=79
+autocmd BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 cc=80 textwidth=79
 
 " Lua-specific settings
 " use two spaces for indentation
