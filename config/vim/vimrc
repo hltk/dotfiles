@@ -1,37 +1,16 @@
-colo default                                     " colorscheme settings
-syntax on
-set background=dark
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/                    " highlight trailing whitespace
+syntax on                                        " use syntax highlighting
+set background=dark                              "
+match Error /\s\+$/                              " highlight trailing whitespace
 set number                                       " use line numbers
 set hlsearch incsearch                           " search settings
-set noerrorbells t_vb=                           " disable screen flash
-set backspace=indent,eol,start                   " sane settings for backspace key
-set mouse=a                                      " enable mouse support
-set title                                        " terminal title
-set smartindent autoindent expandtab             " autoindent settings
-set formatoptions=tcqro                          " r = insert comment when pressing enter in insert mode
+set formatoptions=tcqro                          "
 set scrolloff=5                                  " keep the cursor near the center of the screen
+filetype plugin indent on                        " filetype plugin
+set clipboard=unnamedplus                        " use the system clipboard
                                                  " Jump to the last position when reopening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-autocmd FileType gitcommit setlocal nobuflisted cc=81 textwidth=80
-
-autocmd BufRead,BufNewFile *Makefile* set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8
-
-autocmd BufRead,BufNewFile *.cpp set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
-autocmd BufRead,BufNewFile *.cc set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
-autocmd BufRead,BufNewFile *.hpp set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
-autocmd BufRead,BufNewFile *.hh set softtabstop=8 shiftwidth=8 shiftwidth=8 cindent noexpandtab
-
+                                                 " insert template.cpp into new C++ files
 autocmd BufNewFile main.cpp read ~/codes/sync/template.cpp | normal ggdd
-
-autocmd BufRead,BufNewFile *.rb set tabstop=2 softtabstop=2 shiftwidth=2 cc=81
-autocmd BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 cc=80 textwidth=79
-autocmd BufRead,BufNewFile *.lua set tabstop=2 softtabstop=2 shiftwidth=2
-
-" use system clipboard
-set clipboard=unnamedplus
 
 " from https://vim.fandom.com/wiki/Automatic_insertion_of_C/C%2B%2B_header_gates
 function! s:insert_gates()
@@ -42,10 +21,6 @@ function! s:insert_gates()
   normal! kk
 endfunction
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
-
-" fly through quickfix mode
-map <C-j> :cn<CR>
-map <C-k> :cp<CR>
 
 " no not clutter my home directory
 set undofile undodir=$XDG_DATA_HOME/vim/undo
