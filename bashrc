@@ -4,20 +4,14 @@ PS1='\[\e[0;30;48;5;81m\]\h\[\e[m\] \[\e[0;38;5;40m\]\w\[\e[m\] \[\e[0m\]%\[\e0 
 
 # enable colors
 alias grep="grep --color=auto"
-
 alias ls="ls -F --color=auto"
+
 alias l='ls'
-alias v="vim"
 alias gdb='gdb -q -nh -x "$XDG_CONFIG_HOME"/gdb/init'
 
 mkcd() {
 	test -e "$1" || mkdir "$1"
 	cd "$1"
-}
-
-grepe() {
-	rg -n --color=never "$@" . > /tmp/vimgrep.list
-	vim -q /tmp/vimgrep.list
 }
 
 cm() {
