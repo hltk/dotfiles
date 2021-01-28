@@ -1,5 +1,5 @@
 configuration {
 	modi: "window,drun,ssh,combi";
-	theme: "Paper";
-	font: "Hack 12";
+	theme: "sidebar";
+	font: "Monospace 9";
  }
