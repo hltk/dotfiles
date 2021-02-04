@@ -27,6 +27,7 @@ export IRBRC="$XDG_CONFIG_HOME"/irb/irbrc
 export LESSHISTFILE="$XDG_CACHE_HOME"/lesshistory
 export PSQLRC="$XDG_CONFIG_HOME"/psqlrc
 export PSQL_HISTORY="$XDG_CACHE_HOME"/psql_history
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export SQLITE_HISTORY="$XDG_CACHE_HOME"/sqlite_history
 export VIMINIT='let $VIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $VIMRC'
 export XAUTHORITY="$XDG_CONFIG_HOME"/x11/authority
