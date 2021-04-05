@@ -51,7 +51,6 @@ append_path () {
 [ -d "$GEM_HOME"/bin ] && append_path "$GEM_HOME/bin"
 [ -d "$GOPATH"/bin ] && append_path "$GOPATH/bin"
 
-
 export LANG=en_US.UTF-8
 export EDITOR=vim
 export PYTHONDONTWRITEBYTECODE=1
