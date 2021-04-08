@@ -3,8 +3,9 @@ export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$HOME"/.local/share
 
-alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
 alias startx="startx $XDG_CONFIG_HOME/x11/xinitrc"
+alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
+alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
 export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
@@ -25,6 +26,7 @@ export INPUTRC="$XDG_CONFIG_HOME"/inputrc
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 export IRBRC="$XDG_CONFIG_HOME"/irb/irbrc
 export LESSHISTFILE="$XDG_CACHE_HOME"/lesshistory
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/config
 export PSQLRC="$XDG_CONFIG_HOME"/psqlrc
 export PSQL_HISTORY="$XDG_CACHE_HOME"/psql_history
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
