@@ -11,6 +11,7 @@ set clipboard=unnamedplus                        " use the system clipboard
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
                                                  " insert template.cpp into new C++ files
 autocmd BufNewFile main.cpp read ~/codes/sync/template.cpp | normal ggdd
+autocmd BufNewFile main.rs read ~/codes/sync/template.rs | normal ggdd
 
 " from https://vim.fandom.com/wiki/Automatic_insertion_of_C/C%2B%2B_header_gates
 function! s:insert_gates()

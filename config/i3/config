@@ -1,6 +1,6 @@
 set $mod Mod4
 set $font "pango:monospace 9"
-set $term alacritty
+set $term "env GTK_THEME=Adwaita:dark mate-terminal"
 set $launcher "rofi -show run
 
 font $font

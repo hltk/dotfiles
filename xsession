@@ -5,7 +5,7 @@ xset r rate 200 45             # repeat after 200 ms, 45 char/s
 # map caps lock to escape
 # disable 'dead keys' (https://en.wikipedia.org/wiki/Dead_key)
 # to fix a problem with ~ not working in Alacritty, xterm and urxvt
-setxkbmap fi -option caps:escape -variant nodeadkeys
+setxkbmap fi -option caps:escape
 
 # disable escape
 xmodmap -e "keycode 9 = NoSymbol"
@@ -20,5 +20,7 @@ if [ "$(uname -s)" = "Linux" ]; then
 fi
 
 xsetroot -solid "#3a6ea5"
+
+xrandr --output HDMI-0 --mode 1920x1080 --rate 75
 
 exec i3
