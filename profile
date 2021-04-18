@@ -3,10 +3,6 @@ export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$HOME"/.local/share
 
-alias startx="startx $XDG_CONFIG_HOME/x11/xinitrc"
-alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
-alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
-
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
 export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
 export BUNDLE_USER_HOME="$XDG_CACHE_HOME"/bundle
@@ -57,3 +53,12 @@ append_path () {
 export LANG=en_US.UTF-8
 export EDITOR=vim
 export PYTHONDONTWRITEBYTECODE=1
+
+alias gdb='gdb -q -nh -x "$XDG_CONFIG_HOME"/gdb/init'
+alias grep="grep --color=auto"
+alias l='ls'
+alias ls="ls -F --color=auto"
+alias startx="startx $XDG_CONFIG_HOME/x11/xinitrc"
+alias v="vim"
+alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
+alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"

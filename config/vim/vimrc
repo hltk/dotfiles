@@ -1,15 +1,30 @@
-syntax on                                        " use syntax highlighting
-set background=dark                              "
-match Error /\s\+$/                              " highlight trailing whitespace
-set number                                       " use line numbers
-set hlsearch incsearch                           " search settings
-set formatoptions=tcqro                          "
-set scrolloff=5                                  " keep the cursor near the center of the screen
-filetype plugin indent on                        " filetype plugin
-set clipboard=unnamedplus                        " use the system clipboard
-                                                 " Jump to the last position when reopening a file
+" no not clutter my home directory
+set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+set backupdir=$XDG_CACHE_HOME/vim/backup | call mkdir(&backupdir, 'p')
+set directory=$XDG_DATA_HOME/vim/swap | call mkdir(&directory, 'p')
+set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
+set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
+set undofile undodir=$XDG_DATA_HOME/vim/undo | call mkdir(&undodir,   'p')
+set viewdir=$XDG_DATA_HOME/vim/view | call mkdir(&viewdir, 'p')
+
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+syntax on
+colo solarized8
+set background=light
+match Error /\s\+$/
+set number
+set hlsearch incsearch
+set formatoptions=tcqro
+set scrolloff=5
+filetype plugin indent on
+set clipboard=unnamedplus
+
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-                                                 " insert template.cpp into new C++ files
 autocmd BufNewFile main.cpp read ~/codes/sync/template.cpp | normal ggdd
 autocmd BufNewFile main.rs read ~/codes/sync/template.rs | normal ggdd
 
@@ -22,11 +37,3 @@ function! s:insert_gates()
   normal! kk
 endfunction
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
-
-" no not clutter my home directory
-set undofile undodir=$XDG_DATA_HOME/vim/undo
-set directory=$XDG_DATA_HOME/vim/swap
-set backupdir=$XDG_DATA_HOME/vim/backup
-set viewdir=$XDG_DATA_HOME/vim/view
-set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
-set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after

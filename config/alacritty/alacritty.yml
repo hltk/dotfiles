@@ -4,49 +4,31 @@ font:
 key_bindings:
   - { key: F,   mods: Control,           action: SearchForward    }
 
-# colors from: https://github.com/kaihendry/dotfiles/blob/master/.alacritty.yml
+# Colors (Solarized Light)
 colors:
-  search:
-    focused_match:
-      foreground: '#181818'
-      background: '#ab4642'
-    matches:
-      foreground: '#181818'
-      background: '#f4bf75'
-    bar:
-      foreground: '#d0d0d0'
-      background: '#262626'
-
+  # Default colors
   primary:
-    background: '#000000'
-    foreground: '#dddddd'
-  cursor:
-    text: '#000000'
-    cursor: '#dddddd'
+    background: '0xfdf6e3'
+    foreground: '0x586e75'
+
+  # Normal colors
   normal:
-    black:   '#000000'
-    red:     '#d54e53'
-    green:   '#00ff00'
-    yellow:  '#e6c547'
-    blue:    '#7aa6da'
-    magenta: '#c397d8'
-    cyan:    '#70c0ba'
-    white:   '#eaeaea'
+    black:   '0x073642'
+    red:     '0xdc322f'
+    green:   '0x859900'
+    yellow:  '0xb58900'
+    blue:    '0x268bd2'
+    magenta: '0xd33682'
+    cyan:    '0x2aa198'
+    white:   '0xeee8d5'
+
+  # Bright colors
   bright:
-    black:   '#666666'
-    red:     '#ff3334'
-    green:   '#00ff00'
-    yellow:  '#e7c547'
-    blue:    '#7aa6da'
-    magenta: '#b77ee0'
-    cyan:    '#54ced6'
-    white:   '#ffffff'
-  dim:
-    black:   '#000000'
-    red:     '#8c3336'
-    green:   '#00ff00'
-    yellow:  '#97822e'
-    blue:    '#506d8f'
-    magenta: '#80638e'
-    cyan:    '#497e7a'
-    white:   '#9a9a9a'
+    black:   '0x002b36'
+    red:     '0xcb4b16'
+    green:   '0x586e75'
+    yellow:  '0x657b83'
+    blue:    '0x839496'
+    magenta: '0x6c71c4'
+    cyan:    '0x93a1a1'
+    white:   '0xfdf6e3'

@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/hltk/dotfiles/config/gtk-3.0'
+let g:netrw_dirhist_2='/usr/share/themes/Yaru/gtk-3.20'
+let g:netrw_dirhist_1='/home/hltk/dotfiles/config/gtk-3.0'
