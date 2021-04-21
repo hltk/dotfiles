@@ -19,7 +19,7 @@ if [ "$(uname -s)" = "Linux" ]; then
 	fi
 fi
 
-xsetroot -solid "#3a6ea5"
+xsetroot -solid "#fdf6e3"
 
 xrandr --output HDMI-0 --mode 1920x1080 --rate 75
 
