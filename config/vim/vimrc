@@ -34,7 +34,6 @@ set clipboard=unnamedplus
 
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufNewFile main.cpp read ~/codes/sync/template.cpp | normal ggdd
-autocmd BufRead,BufNewFile *.cpp set sts=2 sw=2 ts=2 et list lcs=tab:>-
 
 " from https://vim.fandom.com/wiki/Automatic_insertion_of_C/C%2B%2B_header_gates
 function! s:insert_gates()
