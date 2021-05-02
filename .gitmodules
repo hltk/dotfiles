@@ -1,6 +1,3 @@
 [submodule "config/vim/pack/local/start/editorconfig-vim"]
 	path = config/vim/pack/local/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "config/vim/pack/default/start/vim-polyglot"]
-	path = config/vim/pack/default/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot/tree/master
