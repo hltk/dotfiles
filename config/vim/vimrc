@@ -10,21 +10,20 @@ set runtimepath^=$XDG_CONFIG_HOME/vim
 set runtimepath+=$XDG_DATA_HOME/vim
 set runtimepath+=$XDG_CONFIG_HOME/vim/after
 
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+let &t_SR = "\e[4 q"
+
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-let &t_SR = "\e[4 q"
-
-let solarized_italics = 0
-
 syntax on
-colo solarized8
-set background=light
+
+colo monokai
+
 match Error /\s\+$/
 set number
 set hlsearch incsearch
