@@ -22,7 +22,10 @@ endif
 
 syntax on
 
-colo monokai
+set background=light
+let g:solarized_italics=0
+let g:solarized_visibility="low"
+colo solarized8
 
 match Error /\s\+$/
 set number
@@ -32,6 +35,7 @@ set scrolloff=5
 set nowrap
 filetype plugin indent on
 set clipboard=unnamedplus
+set list listchars=tab:\ \ 
 
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufNewFile main.cpp read ~/codes/sync/template.cpp | normal ggdd
@@ -45,3 +49,5 @@ function! s:insert_gates()
   normal! kk
 endfunction
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
+
+set guifont=monospace\ 18
