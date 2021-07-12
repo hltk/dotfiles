@@ -22,10 +22,8 @@ endif
 
 syntax on
 
-set background=light
-let g:solarized_italics=0
-let g:solarized_visibility="low"
-colo solarized8
+colo default
+set background=dark
 
 match Error /\s\+$/
 set number
@@ -51,3 +49,5 @@ endfunction
 autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
 
 set guifont=monospace\ 18
+set spell
+au BufRead,BufNewFile *.md setlocal textwidth=80 cc=81
