@@ -49,6 +49,7 @@ append_path () {
 [ -d "$HOME"/dotfiles/bin ] && append_path "$HOME/dotfiles/bin"
 [ -d "$GEM_HOME"/bin ] && append_path "$GEM_HOME/bin"
 [ -d "$GOPATH"/bin ] && append_path "$GOPATH/bin"
+[ -d "$HOME"/.local/bin ] && append_path "$HOME/.local/bin"
 
 export LANG=en_US.UTF-8
 export EDITOR=vim
